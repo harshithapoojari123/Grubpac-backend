@@ -1,7 +1,5 @@
-const { Sequelize } = require("sequelize");
-
 const sequelize = new Sequelize(
-  process.env.MYSQLDATABASE,
+  process.env.MYSQLDATABASE,   // MUST NOT BE EMPTY
   process.env.MYSQLUSER,
   process.env.MYSQLPASSWORD,
   {
@@ -11,5 +9,3 @@ const sequelize = new Sequelize(
     logging: false,
   }
 );
-
-module.exports = sequelize;
